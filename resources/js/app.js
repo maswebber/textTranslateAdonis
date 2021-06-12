@@ -22,7 +22,7 @@ const axios = require('axios');
         // console.log(data)
         axios.post(url,data)
           .then(function (response) {
-            console.log(response.data);
+            textend.value=response.data.sentences;
           })
           .catch(function (error) {
             console.log(error);
