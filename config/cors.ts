@@ -106,9 +106,6 @@ const corsConfig: CorsConfig = {
     'expires',
     'last-modified',
     'pragma',
-    'Authorization', 
-    'X-Requested-With',
-    'Access-Control-Allow-Headers'
   ],
 
   /*
