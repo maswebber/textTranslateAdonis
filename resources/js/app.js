@@ -15,12 +15,17 @@ const axios = require('axios');
             tl:tl.value,
             q:textto.value,
         };
-        // const header={
-        //     'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8',
-        //     'User-Agent': 'AndroidTranslate/5.3.0.RC02.130475354-53000263 5.1 phone TRANSLATE_OPM5_TEST_1',
-        // }
+        const cross={crossDomain:true}
+        
+        const header={
+          header:{
+          'Access-Control-Allow-Origin': '*',
+          'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8',
+          'User-Agent': 'AndroidTranslate/5.3.0.RC02.130475354-53000263 5.1 phone TRANSLATE_OPM5_TEST_1',
+          }
+        }
         // console.log(data)
-        axios.post(url,data)
+        axios.post(url,data,header,cross)
           .then(function (response) {
             textend.value=response.data.sentences;
           })
