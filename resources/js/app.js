@@ -10,14 +10,13 @@ const axios = require('axios');
     translate.addEventListener('submit',function(e){
         e.preventDefault();
         const url = `https://translate.google.com/translate_a/single?client=at&dt=t&dt=ld&dt=qca&dt=rm&dt=bd&dj=1&hl=${tl.value}&ie=UTF-8&oe=UTF-8&inputm=2&otf=2&iid=1dd3b944-fa62-4b55-b330-74909a99969e`;
-        const data={
-            sl:sl.value,
-            tl:tl.value,
-            q:textto.value,
-        };
+        const params = new URLSearchParams();
+        params.append('sl', sl.value);
+        params.append('tl', tl.value);
+        params.append('q', textto.value);
         const cross={crossDomain:true}
         // console.log(data)
-        axios.post(url,data,cross)
+        axios.post(url,params,cross)
           .then(function (response) {
             textend.value=response.data.sentences;
           })
