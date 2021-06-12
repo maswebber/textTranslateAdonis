@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TextToTranslate build with AdonisJS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  @entryPointStyles('app')
+  @entryPointScripts('app')
+</head>
+<body>
+
+  <main>
+    <div class="container-sm" style="width:50%">
+      <h1 class="text-center">TextToTranslate</h1>
+      <p class="text-center">Welcome to TextToTranslate</p>
+      <form action="#" id="formTrans">
+        <div class="row align-items-center">
+          <div class="col align-self-center">
+            <select class="form-select form-control-sm" name="sl" id="sl" required>
+              <option value="">Translate from</option>
+              <option value="en">English </option>
+              <option value="zh">Chinese Mandarin</option>
+              <option value="id">Indonesia</option>
+            </select><br>
+            <textarea name="textto" id="textto" cols="30" rows="10" placeholder="Enter sentence(s) you want translate (Max 120 characters)" maxlength="120" required></textarea>
+          </div>
+          <div class="col align-self-center">
+            <input type="submit" value="Translate" class="btn btn-warning" id="trans">
+            {{--  <button type="submit" class="btn btn-warning" id="trans"></button>  --}}
+          </div>
+          <div class="col align-self-center">
+            <select class="form-select form-control-sm" name="tl" id="tl" required>
+              <option value="">Translate to</option>
+              <option value="en">English </option>
+              <option value="zh">Chinese Mandarin</option>
+              <option value="id">Indonesia</option>
+            </select><br>
+            <textarea name="textend" id="textend" cols="30" rows="10" placeholder="Translation goes here" readonly="true" maxlength="120"></textarea>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>
