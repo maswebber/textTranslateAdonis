@@ -1,6 +1,6 @@
 # Welcome to TextToTranslate
 
-This app for Topcoder challenge making translation app. This app using Adonis JS, Bootstrap 5, and Axios
+This app for Topcoder challenge making translation app. This app using Node JS with Adonis JS, Bootstrap 5, and Axios
 
 
 # Commands
