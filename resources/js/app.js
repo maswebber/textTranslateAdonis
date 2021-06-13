@@ -19,8 +19,8 @@ translate.addEventListener('submit',function(e){
     // console.log(data)
     axios.post(url,qs.stringify(data),cross)
       .then(function (response) {
-        // textend.value=response.data.sentences;
-        console.log(response.data);
+        textend.value=response.data.sentences.trans;
+        // console.log(response.data);
       })
       .catch(function (error) {
         console.log(error);
