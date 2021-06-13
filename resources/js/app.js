@@ -19,7 +19,7 @@ translate.addEventListener('submit',function(e){
     // console.log(data)
     axios.post(url,qs.stringify(data),cross)
       .then(function (response) {
-        textend.value=response.data.sentences.trans;
+        textend.value=response.data.sentences[0].trans;
         // console.log(response.data);
       })
       .catch(function (error) {

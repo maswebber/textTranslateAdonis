@@ -44,8 +44,8 @@ const corsConfig: CorsConfig = {
   |                     one of the above values.
   |
   */
-  // origin:'*',
-  origin: ['https://texttranslatewow.herokuapp.com/'],
+  origin:'*',
+  // origin: ['https://texttranslatewow.herokuapp.com/'],
 
 
   /*
